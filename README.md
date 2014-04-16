@@ -19,6 +19,7 @@ The frontend of this application is written in Javascript, utilizing the followi
 - My own [grunt-requirejs-angularjs-sass-boilerplate](https://github.com/jakemmarsh/grunt-requirejs-angularjs-sass-boilerplate) (without the SASS)
 - [AngularJS](http://angularjs.org/)
 - [RequireJS](http://requirejs.org/)
+- [Bootstrap CSS](http://getbootstrap.com/)
 
 ---
 
