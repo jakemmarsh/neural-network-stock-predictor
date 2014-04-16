@@ -4,8 +4,7 @@
  */
 define([
     './templates',
-    './controllers/example-ctrl',
-    './directives/example-directive',
-    './services/example-service',
-    './filters/example-filter'
+    './controllers/search-ctrl',
+    './controllers/results-ctrl',
+    './services/api-service'
 ], function () {});

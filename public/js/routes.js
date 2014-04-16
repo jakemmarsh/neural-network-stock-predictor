@@ -10,9 +10,8 @@ define(['./app'], function (app) {
         $stateProvider
         .state('index', {
             url: '/',
-            templateUrl: 'partials/example.html',
-            controller: 'exampleCtrl',
-            title: 'Home'
+            templateUrl: 'partials/search.html',
+            controller: 'searchCtrl'
         });
 
         $urlRouterProvider.otherwise("/");
