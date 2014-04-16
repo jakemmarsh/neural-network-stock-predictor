@@ -15,9 +15,9 @@ def css_proxy(path):
     return send_file(os.path.join('public/css/', path))
 
 # API routes
-@app.route('/api/<path:p>')
-def api(p):
-    return "API"
+@app.route('/api/analyze/<symbol>')
+def api(symbol):
+    return "API analyzing: "+symbol
 
 # leave frontend routing up to Angular
 @app.route('/', defaults={'p': ''})
