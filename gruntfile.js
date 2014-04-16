@@ -9,7 +9,7 @@ module.exports = function(grunt) {
                 tasks: ['ngtemplates']
             },
             scripts: {
-                files: ['./public/js/**/*.js'],
+                files: ['./public/js/**/*.js', '!./public/js/main.min.js'],
                 tasks: ['requirejs']
             }
         },
