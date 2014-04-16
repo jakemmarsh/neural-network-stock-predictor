@@ -4,16 +4,35 @@
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title ng-bind="pageTitle + ' &mdash; App Name'">App Name</title>
+      <title>Neural Network Stock Predictor</title>
       <base href="/">
       <link href="./css/bootstrap.min.css" rel="stylesheet" media="screen">
       <link href="./css/bootstrap-theme.min.css" rel="stylesheet" media="screen">
-      <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-      <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
 
     <body>
-    	<div ui-view></div>
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <!-- We use the fluid option here to avoid overriding the fixed width of a normal container within the narrow content columns. -->
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Neural Network Stock Predictor</a>
+                </div>
+            </div>
+        </nav>
+
+        <section class="container-fluid" ui-view></section>
+
+        <div style="position: absolute; bottom: 0; width: 100%; background-color: #f5f5f5;">
+            <div class="container-fluid">
+                <div class="row">
+                <div class="col-md-6">
+                    <p class="text-muted" style="margin: 20px 0;">Neural Network Stock Predictor by <a href="https://github.com/jakemmarsh" target="_blank">Jake Marsh</a>.</p>
+                </div>
+                <div class="col-md-6 text-right">
+                    <a href="https://github.com/jakemmarsh/neural-network-stock-predictor" target="_blank" style="margin: 20px 0; display: block;">View source code on Github</a>
+                </div>
+            </div>
+        </div>
 
         <script data-main="./js/main.min.js" src="./js/lib/requirejs/require.js"></script>
     </body>
