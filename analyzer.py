@@ -16,7 +16,7 @@ def getHistoricalData(stockSymbol):
     for line in apiData:
         if(len(line) > 0):
             tempLine = line.split(',')
-            historicalPrices.append(tempLine[1])
+            historicalPrices.append(float(tempLine[1]))
 
     return historicalPrices
 
@@ -29,4 +29,4 @@ def analyzeSymbol(stockSymbol):
     # return prediction
     return True
 
-getHistoricalData("GOOG")
+print getHistoricalData("GOOG")
