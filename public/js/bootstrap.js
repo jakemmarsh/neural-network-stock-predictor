@@ -15,13 +15,6 @@ define([
 
         // any functions or variables to declare at runtime
 
-        // change page title based on state
-        $rootScope.$on('$stateChangeSuccess', function(event, toState) {
-            if(toState.title) {
-                $rootScope.pageTitle = toState.title;
-            }
-        });
-
     }]);
 
     require(['domReady!'], function (document) {
