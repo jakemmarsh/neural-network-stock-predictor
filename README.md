@@ -9,10 +9,8 @@ This is an application that utilizes the power of neural networks in order to at
 
 ### Libraries Used
 
-The backend of this application is written in Python, utilizing the following libraries:
+The backend of this application is written in Python, utilizing the [Flask](http://flask.pocoo.org/) framework to create an API.
 
-- [Flask](http://flask.pocoo.org/)
-- [PyBrain](http://pybrain.org/)
 
 The frontend of this application is written in Javascript, utilizing the following libraries:
 
@@ -25,9 +23,8 @@ The frontend of this application is written in Javascript, utilizing the followi
 
 ### How To Run
 
-In order for the backend to function, the previously mentioned Python libraries must be installed. These can be installed using [pip](http://www.pip-installer.org/en/latest/) with the following commands:
+In order for the backend to function, the previously mentioned Python framework must be installed. This can be installed using [pip](http://www.pip-installer.org/en/latest/) with the following command:
 
-- `pip install pybrain`
 - `pip install Flask`
 
 For the frontend, no installation is necessary. However, in order to utilize the supplied Grunt tasks for minification and compilation, [npm](https://www.npmjs.org/) must be installed to run the following command:

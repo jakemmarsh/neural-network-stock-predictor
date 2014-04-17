@@ -1,5 +1,8 @@
 from flask import Flask, send_file
 import os
+import json
+
+from analyzer import analyzeSymbol
 
 app = Flask(__name__)
 
@@ -15,9 +18,9 @@ def css_proxy(path):
     return send_file(os.path.join('public/css/', path))
 
 # API routes
-@app.route('/api/analyze/<symbol>')
-def api(symbol):
-    return "API analyzing: "+symbol
+@app.route('/api/analyze/<stockSymbol>')
+def apiAnalyze(stockSymbol):
+    return json.dumps(analyzeSymbol(stockSymbol))
 
 # leave frontend routing up to Angular
 @app.route('/', defaults={'p': ''})
