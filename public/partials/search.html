@@ -1,14 +1,19 @@
 <div style="margin-top: 5%;" ng-hide="analyzed">
     <h2>Analyze a Stock Symbol</h2>
     <div class="well">
-        <p>Search for a stock symbol to attempt to analyze using the neural network.</p>
-        <form name="symbolSearch" class="input-group input-group-lg" ng-submit="analyzeSymbol(symbol)">
-            <input type="text" class="form-control" id="symbol" name="symbol" ng-model="symbol" required />
-            <span class="input-group-btn">
-                <button class="btn btn-primary" type="submit" ng-disabled="symbolSearch.$invalid">Analyze</button>
-            </span>
-        </form>
-        <strong class="text-danger" style="margin-top: 8px; display: block;" ng-bind="errorMessage"></strong>
+        <div ng-hide="analyzing">
+            <p>Search for a stock symbol to attempt to analyze using the neural network.</p>
+            <form name="symbolSearch" class="input-group input-group-lg" ng-submit="analyzeSymbol(symbol)">
+                <input type="text" class="form-control" id="symbol" name="symbol" ng-model="symbol" required />
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="submit" ng-disabled="symbolSearch.$invalid">Analyze</button>
+                </span>
+            </form>
+            <strong class="text-danger" style="margin-top: 8px; display: block;" ng-bind="errorMessage"></strong>
+        </div>
+        <div ng-show="analyzing">
+            <p>Analyzing <span ng-bind="symbol"></span>...</p>
+        </div>
     </div>
 </div>
 
