@@ -10,8 +10,20 @@ define(['./app'], function (app) {
         $stateProvider
         .state('index', {
             url: '/',
-            templateUrl: 'partials/search.html',
-            controller: 'searchCtrl'
+            templateUrl: 'partials/analyze.html',
+            controller: 'analyzeCtrl'
+        })
+        .state('results', {
+            url: '/results',
+            templateUrl: 'partials/results.html',
+            controller: 'resultsCtrl',
+            resolve: {
+                checkIfAnalyzed: ['$rootScope', '$location', function($rootScope, $location) {
+                    if(!$rootScope.analysisData) {
+                        $location.path('/');
+                    }
+                }]
+            }
         });
 
         $urlRouterProvider.otherwise("/");

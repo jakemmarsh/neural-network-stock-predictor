@@ -1,1 +1,10 @@
-Results of stock search
+<div class="well">
+    <h2 class="text-center text-primary">Results of Analysis for <span ng-bind="symbol"></span></h2>
+    <nvd3-line-chart
+        data="chartData"
+        width="100%"
+        height="500"
+        showXAxis="true"
+        showYAxis="true">
+    </nvd3-line-chart>
+</div>

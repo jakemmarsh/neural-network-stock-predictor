@@ -4,7 +4,7 @@
  */
 define([
     './templates',
-    './controllers/search-ctrl',
+    './controllers/analyze-ctrl',
     './controllers/results-ctrl',
     './services/api-service'
 ], function () {});
