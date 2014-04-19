@@ -1,4 +1,6 @@
 import json, urllib2
+from datetime import datetime
+from time import mktime
 
 from neuralNetwork import NN
 
@@ -16,17 +18,24 @@ def getHistoricalData(stockSymbol):
     for line in apiData:
         if(len(line) > 0):
             tempLine = line.split(',')
-            historicalPrices.append(float(tempLine[1]))
+            utcdate = mktime(datetime.utctimetuple(datetime.strptime(tempLine[0], "%m/%d/%Y")))
+            price = float(tempLine[1])
+            historicalPrices.append([utcdate, price])
 
     return historicalPrices
 
 def analyzeSymbol(stockSymbol):
-    historicalPrices = getHistoricalData(stockSymbol)
+    stockPrices = getHistoricalData(stockSymbol)
     network = NN(ni = 2, nh = 2, no = 1)
 
     # train neural network with historical prices
 
-    # return prediction
-    return True
+    # get prediction
+
+    # create array of format [nextBusinessDayUTC, predictedPrice]
+    # push array onto historicalPrices
+
+    # return prices, along with prediction
+    return stockPrices
 
 print getHistoricalData("GOOG")
