@@ -3,7 +3,8 @@ define([
     'angular-sanitize',
     'angular-ui-router',
     './controllers/index',
-    './services/index'
+    './services/index',
+    'nvd3-directives'
 ], function (ng) {
     'use strict';
 
@@ -11,6 +12,7 @@ define([
         'app.services',
         'app.controllers',
         'ngSanitize',
-        'ui.router'
+        'ui.router',
+        'nvd3ChartDirectives'
     ]);
 });
