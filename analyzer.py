@@ -2,7 +2,7 @@ import json, urllib2
 from datetime import datetime
 from time import mktime
 
-from neuralNetwork import NN
+from neuralNetwork import NeuralNetwork
 
 def getHistoricalData(stockSymbol):
     historicalPrices = []
@@ -26,7 +26,7 @@ def getHistoricalData(stockSymbol):
 
 def analyzeSymbol(stockSymbol):
     stockPrices = getHistoricalData(stockSymbol)
-    network = NN(ni = 2, nh = 2, no = 1)
+    network = NeuralNetwork(inputNodes = 2, hiddenNodes = 2, outputNodes = 1)
 
     # train neural network with historical prices
 
