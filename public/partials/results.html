@@ -1,4 +1,4 @@
 <div class="well">
     <h2 class="text-center text-primary">Results of Analysis for <span ng-bind="symbol"></span></h2>
-    <h1 class="text-center text-success" style="margin-top: 8%;" ng-bind="'Predicted Stock Price: ' + predictedPrice"></h1>
+    <h1 class="text-center text-success" style="margin-top: 2%;" ng-bind="'Predicted Stock Price On Next Trading Day: $' + (predictedPrice | number: 2)"></h1>
 </div>

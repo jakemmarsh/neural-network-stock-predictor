@@ -25,13 +25,7 @@ define(['angular', 'app'], function(angular, app) { app.run(['$templateCache', f
   $templateCache.put('partials/results.html',
     "<div class=\"well\">\n" +
     "    <h2 class=\"text-center text-primary\">Results of Analysis for <span ng-bind=\"symbol\"></span></h2>\n" +
-    "    <nvd3-line-chart\n" +
-    "        data=\"chartData\"\n" +
-    "        width=\"100%\"\n" +
-    "        height=\"500\"\n" +
-    "        showXAxis=\"true\"\n" +
-    "        showYAxis=\"true\">\n" +
-    "    </nvd3-line-chart>\n" +
+    "    <h1 class=\"text-center text-success\" style=\"margin-top: 2%;\" ng-bind=\"'Predicted Stock Price On Next Trading Day: $' + (predictedPrice | number: 2)\"></h1>\n" +
     "</div>"
   );
 }]); });
