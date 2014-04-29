@@ -140,26 +140,3 @@ class NeuralNetwork:
                 error = error + self.backPropagate(targets, N, M)
             if i % 100 == 0:
                 print('error %-.5f' % error)
-
-## ================================================================
-
-def demo():
-    # Teach network XOR function
-    pat = [
-        [[0,0], [0]],
-        [[0,1], [1]],
-        [[1,0], [1]],
-        [[1,1], [0]]
-    ]
-
-    # create a network with two input, two hidden, and one output nodes
-    n = NeuralNetwork(inputNodes = 2, hiddenNodes = 2, outputNodes = 1)
-    # train it with some patterns
-    n.train(pat)
-    # test it
-    n.test(pat)
-
-## ================================================================
-
-if __name__ == '__main__':
-    demo()
