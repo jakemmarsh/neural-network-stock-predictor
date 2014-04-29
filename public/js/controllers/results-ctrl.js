@@ -7,5 +7,7 @@ define(['./index'], function (controllers) {
             "values": $rootScope.analysisData
         };
 
+        $scope.predictedPrice = $rootScope.analysisData;
+
     }]);
 });
