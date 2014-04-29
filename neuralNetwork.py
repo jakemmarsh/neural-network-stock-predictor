@@ -2,6 +2,8 @@ import math, random, string
 
 random.seed(0)
 
+## ================================================================
+
 # calculate a random number a <= rand < b
 def rand(a, b):
     return (b-a)*random.random() + a
@@ -19,6 +21,8 @@ def sigmoid(x):
 # derivative of our sigmoid function, in terms of the output (i.e. y)
 def dsigmoid(y):
     return 1.0 - y**2
+
+## ================================================================
 
 class NeuralNetwork:
     def __init__(self, inputNodes, hiddenNodes, outputNodes):
@@ -112,9 +116,9 @@ class NeuralNetwork:
         return error
 
 
-    def test(self, patterns):
-        for p in patterns:
-            print(p[0], '->', self.update(p[0]))
+    def test(self, inputNodes):
+        print(inputNodes, '->', self.update(inputNodes))
+        return self.update(inputNodes)[0]
 
     def weights(self):
         print('Input weights:')
@@ -136,3 +140,26 @@ class NeuralNetwork:
                 error = error + self.backPropagate(targets, N, M)
             if i % 100 == 0:
                 print('error %-.5f' % error)
+
+## ================================================================
+
+def demo():
+    # Teach network XOR function
+    pat = [
+        [[0,0], [0]],
+        [[0,1], [1]],
+        [[1,0], [1]],
+        [[1,1], [0]]
+    ]
+
+    # create a network with two input, two hidden, and one output nodes
+    n = NeuralNetwork(inputNodes = 2, hiddenNodes = 2, outputNodes = 1)
+    # train it with some patterns
+    n.train(pat)
+    # test it
+    n.test(pat)
+
+## ================================================================
+
+if __name__ == '__main__':
+    demo()
