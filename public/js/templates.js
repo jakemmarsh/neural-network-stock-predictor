@@ -25,7 +25,8 @@ define(['angular', 'app'], function(angular, app) { app.run(['$templateCache', f
   $templateCache.put('partials/results.html',
     "<div class=\"well\">\n" +
     "    <h2 class=\"text-center text-primary\">Results of Analysis for <span ng-bind=\"symbol\"></span></h2>\n" +
-    "    <h1 class=\"text-center text-success\" style=\"margin-top: 2%;\" ng-bind=\"'Predicted Stock Price On Next Trading Day: $' + (predictedPrice | number: 2)\"></h1>\n" +
+    "    <h1 class=\"text-center text-success\" style=\"margin-top: 2%;\" ng-bind=\"'Predicted Stock Price On Next Trading Day: $' + (prediction.price | number: 2)\"></h1>\n" +
+    "    <h6 class=\"text-center\" style=\"margin-top: 1%;\" ng-bind=\"'Amount of time used to calculate prediction: ' + (prediction.time | number: 4) + ' seconds'\"></h6>\n" +
     "</div>"
   );
 }]); });

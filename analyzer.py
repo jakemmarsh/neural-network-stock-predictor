@@ -1,4 +1,4 @@
-import json, urllib2
+import json, urllib2, time
 from datetime import datetime
 from time import mktime
 
@@ -116,6 +116,8 @@ def getPredictionData(stockSymbol):
 ## ================================================================
 
 def analyzeSymbol(stockSymbol):
+    startTime = time.time()
+    
     trainingData = getTrainingData(stockSymbol)
     
     network = NeuralNetwork(inputNodes = 3, hiddenNodes = 3, outputNodes = 1)
@@ -131,7 +133,12 @@ def analyzeSymbol(stockSymbol):
     # de-normalize and return predicted stock price
     predictedStockPrice = denormalizePrice(returnPrice, predictionData[1], predictionData[2])
 
-    return predictedStockPrice
+    # create return object, including the amount of time used to predict
+    returnData = {}
+    returnData['price'] = predictedStockPrice
+    returnData['time'] = time.time() - startTime
+
+    return returnData
 
 ## ================================================================
 
