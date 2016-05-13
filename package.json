@@ -1,29 +1,33 @@
 {
-    "name": "neural-network-stock-predictor",
-    "version": "0.1.0",
-    "author": "Jake Marsh <jakemmarsh@gmail.com>",
-    "description": "Semester project for COS 470 (Artifical Intelligence) at the University of Maine.",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/jakemmarsh/neural-network-stock-predictor.git"
-    },
-    "keywords": [
-        "grunt",
-        "angular",
-        "angularjs",
-        "requirejs",
-        "python",
-        "flask",
-        "pybrain"
-    ],
-    "devDependencies" : {
-        "grunt" : ">=0.4.x",
-        "grunt-contrib-watch" : "<=0.6.x",
-        "grunt-contrib-requirejs" : ">=0.4.x",
-        "grunt-contrib-imagemin" : ">=0.5.x",
-        "grunt-angular-templates" : ">=0.5.x"
+  "name": "neural-network-stock-predictor",
+  "version": "0.1.0",
+  "author": "Jake Marsh <jakemmarsh@gmail.com>",
+  "description": "Semester project for COS 470 (Artifical Intelligence) at the University of Maine.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jakemmarsh/neural-network-stock-predictor.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "grunt",
+    "angular",
+    "angularjs",
+    "requirejs",
+    "python",
+    "flask",
+    "pybrain"
+  ],
+  "devDependencies": {
+    "angular": "^1.5.0",
+    "angular-sanitize": "^1.5.5",
+    "angular-ui-router": "^0.2.13",
+    "grunt": "^1.0.1",
+    "grunt-angular-templates": "^1.0.3",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
   },
   "scripts": {
     "start": "grunt prod && python server.py"
-    }
+  }
 }
