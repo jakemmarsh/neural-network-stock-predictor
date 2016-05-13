@@ -53,4 +53,4 @@ For the frontend, no installation is necessary. However, in order to utilize the
 
 - `npm install`
 
-In order to then run the program, simply execute the `server.py` file using Python. This will serve the application at the URL it specifies.
+In order to then run the program, execute `npm start`. This will compile and serve the application at the URL specified.

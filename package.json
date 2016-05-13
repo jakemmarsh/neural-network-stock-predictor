@@ -22,5 +22,8 @@
         "grunt-contrib-requirejs" : ">=0.4.x",
         "grunt-contrib-imagemin" : ">=0.5.x",
         "grunt-angular-templates" : ">=0.5.x"
+  },
+  "scripts": {
+    "start": "grunt prod && python server.py"
     }
 }
