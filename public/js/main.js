@@ -11,8 +11,6 @@ require.config({
         'angular': './lib/angular/angular.min',
         'angular-sanitize' : './lib/angular/angular-sanitize.min',
         'angular-ui-router' : './lib/angular/angular-ui-router.min',
-        'nvd3' : './lib/nv.d3',
-        'nvd3-directives' : './lib/angular/angularjs-nvd3-directives.min'
     },
 
     shim: {
@@ -24,12 +22,6 @@ require.config({
         },
         'angular-ui-router': {
             deps: ['angular']
-        },
-        'nvd3': {
-            exports: 'nvd3'
-        },
-        'nvd3-directives': {
-            deps: ['nvd3']
         }
     }
 });
