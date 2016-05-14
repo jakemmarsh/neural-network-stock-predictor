@@ -67,6 +67,13 @@ module.exports = function(grunt) {
                     dest: '.'
                 }]
             }
+        },
+        copy: {
+          requirejs: {
+            files: {
+              './public/js/lib/require.js': './node_modules/requirejs/require.js'
+            }
+          }
         }
     });
 
@@ -74,12 +81,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-angular-templates');
 
     // Production mode tasks
-    grunt.registerTask('prod', ['ngtemplates', 'requirejs', 'imagemin']);
+    grunt.registerTask('prod', ['ngtemplates', 'requirejs', 'imagemin', 'copy:requirejs']);
 
     // Dev mode tasks
-    grunt.registerTask('default', ['ngtemplates', 'requirejs']);
+    grunt.registerTask('default', ['ngtemplates', 'requirejs', 'copy:requirejs']);
 
 };
